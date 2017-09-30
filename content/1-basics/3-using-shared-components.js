@@ -250,6 +250,28 @@ const content = (<p>This is the about page</p>)
 
 export default () => (<Layout content={content}/>)
 ~~~
+
+~~~js
+// From this talk https://www.youtube.com/watch?v=BcVAq3YFiuc
+const layoutStyle = {
+  margin: 20,
+  padding: 20,
+  border: '1px solid #DDD'
+}
+
+const Layout = (props) => (
+  <div style={layoutStyle}>
+    {props.children({name: 'Next.js'})}
+  </div>
+
+export default () => {
+  return (
+    <Layout>
+      {({name}) => <p>Hello {name}</p>}
+    </Layout>
+  )
+}
+~~~
       `
     },
 
