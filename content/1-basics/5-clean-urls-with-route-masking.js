@@ -68,7 +68,7 @@ import Link from 'next/link'
 
 const PostLink = (props) => (
   <li>
-    <Link as={\`/p/\${props.id}\`} href={\`/post?title=\${props.title}\`}>
+    <Link as={\`/p/\${props.title}\`} href={\`/post?title=\${props.title}\`}>
       <a>{props.title}</a>
     </Link>
   </li>
@@ -91,7 +91,7 @@ Have look at the following code block:
 ~~~js
 const PostLink = (props) => (
   <li>
-    <Link as={\`/p/\${props.id}\`} href={\`/post?title=\${props.title}\`}>
+    <Link as={\`/p/\${props.title}\`} href={\`/post?title=\${props.title}\`}>
       <a>{props.title}</a>
     </Link>
   </li>
